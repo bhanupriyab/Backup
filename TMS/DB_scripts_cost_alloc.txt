@@ -1,0 +1,52 @@
+create table temp_carr_inv_type 
+(
+Brewery varchar2(100),
+Carrier varchar2(100),
+carr_bus_enty_id number(9),
+inv_type varchar2(50)
+) 
+
+insert into temp_carr_inv_type values( 'Baldwinsville (BLDV)',    'NFI (NFIL)' ,    3813 ,   'DEDICATED')
+insert into temp_carr_inv_type values('Cartersville (CRTV)',     'Werner (WERD)',    5971,   'DEDICATED');
+insert into temp_carr_inv_type values('Columbus (COL)'  ,  'Werner (WERD)' ,   5971 ,    'DEDICATED');
+insert into temp_carr_inv_type values('Ft Collins (FCL)'  ,  'Werner (WERD)'   , 5971 ,    'DEDICATED');
+insert into temp_carr_inv_type values('Houston (HTN)'   ,  'JB Hunt (HJCS)'   , 3682  ,  'UNBUNDLED');
+insert into temp_carr_inv_type values('Houston (HTN)'  ,   'Ryder (RYCG)'   , 6555 ,    'UNBUNDLED');
+insert into temp_carr_inv_type values('Houston (HTN)' ,    'Questar (QSTR)'   , 6556  ,   'UNBUNDLED');
+insert into temp_carr_inv_type values('Jacksonville (JKSV)' ,   'Werner (WERD)'  ,  5771  ,    'DEDICATED');
+insert into temp_carr_inv_type values('Los Angeles/Fairfield (LA)' ,   'Biagi (BBIG)'  ,  5901,      'DEDICATED');
+insert into temp_carr_inv_type values('Merrimack (MERR)'  ,  'NFI (NFIL)'  ,  3813   ,   'DEDICATED');
+insert into temp_carr_inv_type values('Newark (NWK)'   , 'NFI (NFIL)'   , 3813  ,    'DEDICATED');
+insert into temp_carr_inv_type values('Newark (NWK)'   , 'NFI Long Haul (NAFL)' ,   6281,      'DEDICATED');
+insert into temp_carr_inv_type values('Portland (PORT)' ,  'Schneider (SNCY)',    3115  ,    'DEDICATED');
+insert into temp_carr_inv_type values('St Louis (STL)'  ,  'JB Hunt (HJCS)',    3682 ,    'UNBUNDLED');
+insert into temp_carr_inv_type values('St Louis (STL)' ,   'Element (ELMT)'  ,  6752   ,  'UNBUNDLED');
+insert into temp_carr_inv_type values('St Louis (STL)' ,   'Amerit (AMET)'  ,  6751  ,   'UNBUNDLED');
+insert into temp_carr_inv_type values('St Louis (STL)' ,   'U.S. Gain (GANN)' ,   6756   ,  'UNBUNDLED');
+insert into temp_carr_inv_type values('St Louis (STL)'   , 'Werner (WENF)'   , 6056  ,    'DEDICATED');
+insert into temp_carr_inv_type values('St Louis (STL)'   , 'Werner Long Haul (WENL)' ,   4474   ,   'DEDICATED');
+insert into temp_carr_inv_type values('Williamsburg (WMS)'   , 'NFI (NFIL)'   , 3813     , 'DEDICATED')
+;
+
+
+CREATE TABLE CARR_MULE_COST_ALLOC_DTLS
+( 
+INV_ID NUMBER(9),
+CATGY VARCHAR2(20),
+AB_SHIP_ID  NUMBER(9),
+LOAD_ID NUMBER(28),
+CARR_CD VARCHAR2(64),
+VOCHR_NO VARCHAR2(50),
+VOCHR_ST VARCHAR2(50),
+ADMIN_COST  NUMBER(9,2),
+FUEL_COST  NUMBER(9,2),
+MILGE_COST  NUMBER(9,2),
+TRCTR_COST    NUMBER(9,2),
+TRALR_COST  NUMBER(9,2),
+BCKHAUL_COST  NUMBER(9,2),
+CNG_COST  NUMBER(9,2),
+LEASE_COST  NUMBER(9,2),
+MAINT_COST NUMBER(9,2),
+VOCHR_CHG_CR_STS VARCHAR2(10)
+)
+
